@@ -2,12 +2,13 @@
 title: "Cálculo de variables educativas y estimación de indicadores"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Educacion}
+  %\VignetteIndexEntry{Cálculo de variables educativas y estimación de indicadores}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
 ```{r, include = FALSE}
+options(rmarkdown.html_vignette.check_title = FALSE)
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
@@ -15,11 +16,11 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
+```{r eval = FALSE}
 library(ech)
 ```
 
-En este breve artículo, presentaremos las funciones de la librería `ech` vinculadas a la educación, empezando por `enrolled_school()` que identifica a la matriculación a un centro de educación formal. Mientras que por su parte,  `years_of_schooling()` calcula el acumulado de años de escolaridad. 
+En este breve artículo, presentaremos las funciones de la librería `ech` vinculadas a la educación, empezando por `enrolled_school()` que identifica a la matriculación a un centro de educación formal. Mientras que por su parte, `years_of_schooling()` calcula el acumulado de años de escolaridad. 
 
 Por otra parte, tenemos la función `level_education()` que permite categorizar a la población muestral según su máximo nivel alcanzado en:
 
@@ -30,7 +31,7 @@ Por otra parte, tenemos la función `level_education()` que permite categorizar 
 * Magisterio o profesorado 
 * Universidad o similar
 
-Finalmente `level_completion()`, presenta un grupo de variables dicotómicas que establecen la completitud de primaria, ciclo básico, bachillerato y nivel terciario. Esta última incluye un parametro `n` para definir los años de educación terciaria que se consideran necesarios para haber completado ese nivel. Dado que la educación terciaria se compone de diferentes carreras de variada duración no es posible establecer un cantidad de años predeterminada para considerar que ha completado ese nivel.
+Finalmente `level_completion()`, presenta un grupo de variables dicotómicas que establecen la completitud de primaria, ciclo básico, bachillerato y nivel terciario. Esta última incluye un parametro `n` para definir los años  de educación terciaria que se consideran necesarios para haber completado ese nivel. Dado que la educación terciaria se compone de diferentes carreras de variada duración no es posible establecer un cantidad de años predeterminada para considerar que ha completado ese nivel.
 
 Las variables educativas se relacionan con la edad de las personas, por lo tanto, conviene realizar las estimaciones considerando diferentes tramos de edad. La función `age_groups()` permite crear una variable con grupos de edad.
 
